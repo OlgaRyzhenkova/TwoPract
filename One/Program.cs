@@ -6,11 +6,11 @@ class Program
     {
         while (true)
         {
-            Console.WriteLine("Масив:");
+            Console.WriteLine($"Масив:");
             int[,] arr = RandomInput();
             ShowArr(arr);
             Console.WriteLine($"Кількість чисел в діапазоні:{CountNum(arr)}");
-            Kratni(arr);
+            Console.WriteLine($"Числа кратні 5:{Kratni(arr)}");
         }
     }
     static int[,] RandomInput()
@@ -48,7 +48,7 @@ class Program
         {
             for(int j = 0; j < 10; j++)
             {
-                if( arr[i, j] > min && arr[i, j] < max)
+                if( arr[i, j] >= min && arr[i, j] <= max)
                 {
                     count++;
                 }
@@ -69,9 +69,7 @@ class Program
                     Console.Write(arr[i, j] + " ");
                 }
             }
-            
         }
-        Console.WriteLine(count);
         return count;
     }
 }
