@@ -20,7 +20,6 @@ class Program
         {
             arr[i] = rand.Next(10, 100);
         }
-
     }
     static void PrintArray(int[] arr)
     {
